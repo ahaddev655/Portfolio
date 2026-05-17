@@ -1,0 +1,12 @@
+@media (max-width: 993px) {
+  .portfolio-img-wrapper {
+    width: 260px;
+    height: 260px;
+  }
+  .stat-number-wrapper {
+    font-size: 1.8rem;
+  }
+  .custom-nav-link {
+    width: fit-content !important;
+  }
+}

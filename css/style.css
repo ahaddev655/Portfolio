@@ -1,0 +1,544 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* -------------------- Universal Css -------------------- */
+body {
+  background: #000 !important;
+  font-family: "Poppins", sans-serif !important;
+  color: #fff;
+}
+
+/* -------------------- Header -------------------- */
+.site-header {
+  border-bottom: 1px solid #111;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+}
+
+.text-red {
+  color: #c20000;
+}
+
+.letter-spacing {
+  letter-spacing: 1px;
+}
+
+.custom-nav-link {
+  color: #b3b3b3 !important;
+  font-weight: 500;
+  font-size: 1rem;
+  position: relative;
+  transition: color 0.3s ease;
+  padding: 0.5rem 0 !important;
+}
+
+.custom-nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #c20000;
+  transition: width 0.3s ease;
+}
+
+.custom-nav-link:hover::after,
+.custom-nav-link.active::after {
+  width: 100%;
+}
+
+.custom-nav-link:hover,
+.custom-nav-link.active {
+  color: #fff !important;
+}
+
+.navbar-toggler {
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none !important;
+}
+
+.navbar-toggler-icon {
+  transition: 0.3s all ease-in-out;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+.navbar-toggler-icon:hover {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28194, 0, 0, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+.social-icon {
+  color: #fff;
+  font-size: 1.2rem;
+  transition:
+    transform 0.2s ease,
+    color 0.2s ease;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  color: #c20000;
+  transform: translateY(-2px);
+}
+/* -------------------- Home Section -------------------- */
+.home-section {
+  min-height: 90vh;
+  padding: 80px 0;
+  background-color: #000;
+}
+
+.letter-spacing {
+  letter-spacing: 2px;
+}
+
+.fs-7 {
+  font-size: 0.85rem;
+}
+
+.max-width-p {
+  max-width: 500px;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.cursor {
+  font-weight: 300;
+  color: #c20000;
+  animation: blink 0.7s infinite;
+  margin-left: 3px;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.stat-box {
+  border-left: 2px solid #151515;
+  padding-left: 15px;
+  transition: border-color 0.3s ease;
+}
+
+.stat-box:hover {
+  border-color: #c20000;
+}
+
+.stat-number-wrapper {
+  font-size: 2.25rem;
+  line-height: 1.2;
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  margin-top: 5px;
+}
+
+.portfolio-img-wrapper {
+  position: relative;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #c20000, #220000);
+  padding: 4px; /* Creates the crisp border ring */
+  box-shadow: 0 0 40px rgba(194, 0, 0, 0.15);
+  transition:
+    transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    box-shadow 0.4s ease;
+}
+
+.portfolio-img-wrapper:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 50px rgba(194, 0, 0, 0.3);
+}
+
+.portfolio-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #080808;
+}
+
+.portfolio-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* -------------------- About Section -------------------- */
+.about-section {
+  min-height: 80vh;
+  background-color: #000;
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid #111; /* Clean separation between home and about sections */
+}
+
+/* Subtle background accent glow to make text pop on black docs */
+.about-section::before {
+  content: "";
+  position: absolute;
+  bottom: 10%;
+  right: 5%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(
+    circle,
+    rgba(194, 0, 0, 0.03) 0%,
+    rgba(0, 0, 0, 0) 70%
+  );
+  pointer-events: none;
+}
+
+.leading-relaxed {
+  line-height: 1.8;
+  font-size: 1rem;
+}
+
+/* Modern Image Border Frame */
+.about-img-wrapper {
+  position: relative;
+  width: 340px;
+  height: 420px; /* Rectangular aspect ratio for contrast against the circle hero frame */
+  background: linear-gradient(145deg, #220000, #c20000);
+  padding: 3px;
+  border-radius: 16px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.about-img-wrapper:hover {
+  transform: scale(1.02);
+}
+
+.about-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #080808;
+}
+
+.about-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Feature Micro-Boxes */
+.about-feature-box {
+  background: #0a0a0a;
+  border: 1px solid #161616;
+  border-radius: 10px;
+  padding: 15px;
+  transition: border-color 0.3s ease;
+}
+
+.about-feature-box:hover {
+  border-color: #c20000;
+}
+
+.feature-icon {
+  font-size: 1.5rem;
+  background: rgba(194, 0, 0, 0.1);
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+/* Responsive Overrides */
+@media (max-width: 991.98px) {
+  .about-img-wrapper {
+    width: 280px;
+    height: 350px;
+  }
+}
+
+/* -------------------- Skills Section -------------------- */
+.skills-section {
+  background-color: #000 !important;
+  position: relative;
+}
+
+.category-heading {
+  font-size: 1.75rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.skill-pill {
+  color: #fff;
+  background-color: #000 !important;
+  border: 1px solid #333;
+  padding: 0.6rem 1.8rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border-radius: 50px;
+  cursor: default;
+  user-select: none;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+}
+
+.skill-pill:hover {
+  color: #fff;
+  border-color: #c20000;
+  background-color: #c20000 !important;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(194, 0, 0, 0.45);
+}
+
+/* Responsive Scaling for smaller screens */
+@media (max-width: 575.98px) {
+  .category-heading {
+    font-size: 1.4rem;
+  }
+  .skill-pill {
+    padding: 0.5rem 1.3rem;
+    font-size: 0.85rem;
+  }
+}
+
+/* -------------------- Projects Section -------------------- */
+.projects-section {
+  background-color: #000 !important;
+  position: relative;
+}
+
+.text-red {
+  color: #c20000 !important;
+}
+
+.project-card {
+  background: #000 !important;
+  border: 1px solid #222;
+  border-radius: 0px;
+  overflow: hidden;
+  transition: border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card:hover {
+  border-color: #c20000;
+}
+
+/* Image Container Frame */
+.project-img-container {
+  position: relative;
+  width: 100%;
+  height: 240px;
+  overflow: hidden;
+}
+
+.project-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.project-card:hover .project-img {
+  transform: scale(1.05);
+}
+
+/* Interactive Hover Overlay */
+.project-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.85) 0%,
+    rgba(194, 0, 0, 0.4) 100%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.project-card:hover .project-overlay {
+  opacity: 1;
+}
+
+.project-buttons {
+  display: flex;
+  gap: 12px;
+  transform: translateY(15px);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.project-card:hover .project-buttons {
+  transform: translateY(0);
+}
+
+/* Project Info Area */
+.project-info {
+  padding: 1.75rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  background-color: #000;
+}
+
+.tech-pill {
+  color: #c20000;
+  padding: 5px 20px;
+  border: 1px solid #c20000;
+  border-radius: 100px;
+  transition: 0.1s all ease-in-out;
+  &&:hover {
+    transform: translateY(-2px);
+  }
+}
+
+.project-tag {
+  color: #c20000;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 0.6rem;
+}
+
+.project-title {
+  color: #fff;
+  font-size: 1.35rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  transition: color 0.3s ease;
+}
+
+.project-card:hover .project-title {
+  color: #c20000;
+}
+
+.project-desc {
+  color: #a0a0a0 !important;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+/* Button UI Definitions */
+.btn-red {
+  background-color: #c20000 !important;
+  color: #fff !important;
+  border: 1px solid #c20000 !important;
+  font-weight: 600 !important;
+  padding: 0.5rem 1.2rem !important;
+  border-radius: 0px !important;
+  transition: all 0.3s ease !important;
+}
+
+.btn-red:hover {
+  background-color: #fff !important;
+  border-color: #fff !important;
+  color: #000 !important;
+}
+
+.btn-outline-white {
+  background-color: transparent !important;
+  color: #fff !important;
+  border: 1px solid #fff !important;
+  font-weight: 600 !important;
+  padding: 0.5rem 1.2rem !important;
+  border-radius: 0px !important;
+  transition: all 0.3s ease !important;
+}
+
+.btn-outline-white:hover {
+  background-color: #fff !important;
+  border-color: #fff !important;
+  color: #000 !important;
+}
+
+/* -------------------- Contact Section -------------------- */
+.contact-section {
+  background-color: #000 !important;
+  position: relative;
+}
+
+.contact-lead {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #a0a0a0 !important;
+}
+
+.letter-spacing-sm {
+  letter-spacing: 1.5px;
+}
+
+.contact-icon-box {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.contact-info-item:hover .contact-icon-box {
+  border-color: #c20000;
+  background-color: #c20000;
+}
+
+.contact-info-item:hover .contact-icon-box i {
+  color: #fff !important;
+}
+
+.custom-input {
+  background-color: transparent !important;
+  color: #fff !important;
+  border: none !important;
+  border-bottom: 1px solid #333 !important;
+  border-radius: 0px !important;
+  padding: 0.75rem 0rem;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.custom-input:focus {
+  border-bottom-color: #c20000 !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.custom-input::placeholder {
+  color: #555 !important;
+}
+
+.btn-red {
+  background-color: #c20000 !important;
+  color: #fff !important;
+  border: 1px solid #c20000 !important;
+  border-radius: 0px !important;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.btn-red:hover {
+  background-color: #fff !important;
+  border-color: #fff !important;
+  color: #000 !important;
+}
